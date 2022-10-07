@@ -6,8 +6,8 @@
       <div class="bg-black h-[2px] w-[20px] mt-1"></div>
       <div class="bg-black h-[2px] w-[20px] mt-1"></div>
     </div>
-    {% if brand.logo.image.url %}
-    <img src="{{ brand.logo.image.url }}" alt="">
+    {% if section.settings.logo_image %}
+    <img src="{{ section.settings.logo_image }}" alt="">
     {% else %}
     <h1 class="font-bold">{{shop.name}}</h1>
     {% endif %}
