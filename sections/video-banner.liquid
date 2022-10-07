@@ -1,0 +1,74 @@
+<div class="">
+    <video muted="muted" autoplay loop="loop" preload="auto" class="w-full rounded-b-xl">
+        <source src="https://cdn.shopify.com/videos/c/o/v/a66bf2e46fcc486ead76433894a87346.mp4" type="video/mp4"></source> 
+    </video>
+    <div class='mt-12 flex flex-col justify-center'>
+        <h1 class="text-center text-5xl leading-normal font-bold">Erase stains <br> before they stain.</h1>
+        <h2 class='text-center text-2xl font-medium m-auto text-stone-600 w-11/12 mt-6'>How well do you brush? With iD Stain Eraser, you can identify stains before they become a problem.</h2>
+        <button class="rounded-[50px] bg-black text-white font-semibold w-[85%] py-5 mt-9 mx-auto">Shop iD Stain Eraser</button>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name":"R-Theme Video banner",
+    "tag":"section",
+    "settings":[
+       {
+          "type":"url",
+          "id":"video_banner_url",
+          "label":"Url of your video"
+       }
+    ],
+    "blocks":[
+       {
+          "type":"r-theme-heading",
+          "name":"R-Theme heading text",
+          "limit":1,
+          "settings":[
+             {
+                "type":"text",
+                "id":"h1_video_text",
+                "label":"Your h1 text",
+                "default":"Video banner"
+             }
+          ]
+       },
+       {
+          "type":"r-theme-subheading",
+          "name":"R-Theme Sub-heading text",
+          "limit":1,
+          "settings":[
+             {
+                "type":"text",
+                "id":"h1_video_subtext",
+                "label":"Your h2 text",
+                "default":"Video banner subtext"
+             }
+          ]
+       },
+       {
+          "type":"r-theme-button-video",
+          "name":"R-Theme button video",
+          "limit":1,
+          "settings":[
+             {
+                "type":"url",
+                "id":"url_button_video_banner",
+                "label":"Your url button"
+             },
+             {
+                "type":"text",
+                "id":"button_text_url_video_banner",
+                "label":"Your text button"
+             }
+          ]
+       }
+    ], 
+    "presets": [
+        {
+            "name": "Video banner Rayanos"
+        }
+    ]
+ }
+{% endschema %}

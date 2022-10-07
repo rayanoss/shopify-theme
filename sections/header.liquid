@@ -1,13 +1,13 @@
 <header class="w-full h-20 bg-white relative">
   <!-- Header with hamburger / Logo and cart -->
   <div class="w-[95%] h-full flex justify-between m-auto items-center ">
-    <div class="hamburger-menu-icon">
+    <div class="hamburger-menu-icon h-[10px] flex flex-col justify-between">
       <div class="bg-black h-[2px] w-[20px]"></div>
-      <div class="bg-black h-[2px] w-[20px] mt-1"></div>
-      <div class="bg-black h-[2px] w-[20px] mt-1"></div>
+      <div class="bg-black h-[2px] w-[20px"></div>
+      <div class="bg-black h-[2px] w-[20px]"></div>
     </div>
     {% if section.settings.logo_image %}
-    <img src="{{ section.settings.logo_image }}" alt="">
+    <img src="{{ section.settings.logo_image | image_url: height: 45}}" alt="">
     {% else %}
     <h1 class="font-bold">{{shop.name}}</h1>
     {% endif %}
@@ -17,9 +17,9 @@
   
   <!-- Hamburger menu-list -->
   <ul class="bg-slate-50 h-screen w-[80%] translate-x-[-100%] hamburger-menu-translate transition-transform	duration-500 ease-in relative overflow-hidden">
-    {%- for link in linklists.main-menu.links -%}
+    {%- for link in section.settings.menulist.links -%}
         <li class="{%- if link.links != blank -%}has-submenu{% endif %}{%if link.title == 'BUNDLE & SAVE' or link.links != blank %} bg-white {% endif %}max-h-[69px] h-full border-t border-slate-100 px-6 font-semibold flex justify-between items-center">
-        <a class="w-full h-full flex items-center {% if link.title == 'BUNDLE & SAVE'%}text-pink-600{% endif %}{%if link.links != blank %} justify-between{%endif%}" href="{{link.url}}">
+        <a class="w-full h-full flex items-center{%if link.links != blank %} justify-between{%endif%}" href="{{link.url}}" style="{% assign linksHighlightArray = section.settings.highlight_links | split: ',' %}{% for linkHighlight in linksHighlightArray %}{%if link.title == linkHighlight%}color: {{section.settings.highlight_links_color}}{%endif%}{% endfor %}">
         {% if link.title == 'BUNDLE & SAVE'%}
           <i class="fa-solid fa-percent mr-3"></i>
         {% endif %}
