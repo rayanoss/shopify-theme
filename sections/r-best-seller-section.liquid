@@ -1,0 +1,52 @@
+<div>
+    <div>
+        <h2>{{ section.settings.r_title_best_sellers }}</h2>
+        <a>{{ section.settings.r_text_button_best_sellers }}</a>
+    </div>
+        <ul>
+        {% for product in section.settings.r_collection_best.products %}
+            <li>
+                {% if product.tags != blank %}
+                {% for tag in product.tags %}
+                <p>{{ tag }}</p>
+                {% endfor %}
+                {% endif %}
+                <a href="{{ product.url }}"><img src="{{ product.featured_image }}" alt="" loading="lazy"/></a>
+                <a href="{{ product.url }}">{{ product.title }}</a>
+                <p>{{ section.settings.desc_best_seller }}</p>
+                <button>Add to cart - {{ product.price | money }}</button>
+            </li>
+        {% endfor %}
+        </ul>
+</div>
+
+{% schema %}
+
+{
+    "name": "R-Theme Best Seller", 
+    "tag": "section", 
+    "settings": [
+        {
+            "type": "text", 
+            "id": "r_title_best_sellers", 
+            "label": "Section title"
+        },
+        {
+            "type": "text", 
+            "id": "r_text_button_best_sellers", 
+            "label": "Button text"
+        }, 
+        {
+            "type": "collection", 
+            "id": "r_collection_best", 
+            "label": "Collection"
+        }
+    ], 
+    "presets": [
+        {
+            "name": "R-Theme Best Seller"
+        }
+    ]
+}
+
+{% endschema %}

@@ -7,7 +7,7 @@
       <div class="bg-black h-[2px] w-[20px]"></div>
     </div>
     {% if section.settings.logo_image %}
-    <img src="{{ section.settings.logo_image | image_url: height: 45}}" alt="">
+    <img src="{{ section.settings.logo_image | image_url: height: 45}}" alt="" loading="lazy">
     {% else %}
     <h1 class="font-bold">{{shop.name}}</h1>
     {% endif %}
