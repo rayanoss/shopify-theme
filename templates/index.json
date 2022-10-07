@@ -240,6 +240,14 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "3e78cc32-275f-4aa3-9fad-c76aaca2e6f9": {
+      "type": "r-best-seller-section",
+      "settings": {
+        "r_title_best_sellers": "Shop our best sellers",
+        "r_text_button_best_sellers": "All",
+        "r_collection_best": "best-sellers"
+      }
     }
   },
   "order": [
@@ -249,6 +257,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "3e78cc32-275f-4aa3-9fad-c76aaca2e6f9"
   ]
 }
