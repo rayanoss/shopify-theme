@@ -141,6 +141,7 @@
       "header": {
         "type": "header",
         "settings": {
+          "logo_image": "shopify:\/\/shop_images\/PFH_Website_Logo_300x120px_Hismile.jpg",
           "menulist": "main-menu",
           "highlight_links": "",
           "highlight_links_color": "#000000"
