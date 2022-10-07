@@ -1,12 +1,19 @@
 <div class="">
     <video muted="muted" autoplay loop="loop" preload="auto" class="w-full rounded-b-xl">
-        <source src="https://cdn.shopify.com/videos/c/o/v/a66bf2e46fcc486ead76433894a87346.mp4" type="video/mp4"></source> 
+        <source src="{{section.settings.video_banner_url}}" type="video/mp4"></source> 
     </video>
     <div class='mt-12 flex flex-col justify-center'>
-        <h1 class="text-center text-5xl leading-normal font-bold">Erase stains <br> before they stain.</h1>
-        <h2 class='text-center text-2xl font-medium m-auto text-stone-600 w-11/12 mt-6'>How well do you brush? With iD Stain Eraser, you can identify stains before they become a problem.</h2>
-        <button class="rounded-[50px] bg-black text-white font-semibold w-[85%] py-5 mt-9 mx-auto">Shop iD Stain Eraser</button>
-    </div>
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'r-theme-heading'%}
+                    <h1 class="text-center text-5xl leading-normal font-bold w-9/12 mx-auto">{{block.settings.h1_video_text}}</h1>
+                {% when 'r-theme-subheading'%}
+                    <h2 class='text-center text-2xl font-medium m-auto text-stone-600 w-11/12 mt-6'>{{block.settings.h1_video_subtext}}</h2>
+                {% when 'r-theme-button-video' %}
+                    <button class="rounded-[50px] bg-black text-white font-semibold w-[85%] py-5 mt-9 mx-auto">{{block.settings.button_text_url_video_banner}}</button>
+            {% endcase %}
+        {% endfor %}
+        </div>
 </div>
 
 {% schema %}
