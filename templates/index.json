@@ -8,10 +8,25 @@
           "settings": {
             "h1_video_text": "Erase stains before they stain."
           }
+        },
+        "3b03ea92-ae38-4796-9c2e-57bb15f4ad8c": {
+          "type": "r-theme-subheading",
+          "settings": {
+            "h1_video_subtext": "How well do you brush? With iD Stain Eraser, you can identify stains before they become a problem."
+          }
+        },
+        "31a59e4a-e004-44e7-82d9-8f6c7b21a277": {
+          "type": "r-theme-button-video",
+          "settings": {
+            "url_button_video_banner": "#",
+            "button_text_url_video_banner": "Shop ID Stain Eraser"
+          }
         }
       },
       "block_order": [
-        "25c1fe91-7400-4e56-bde0-632f525fc827"
+        "25c1fe91-7400-4e56-bde0-632f525fc827",
+        "3b03ea92-ae38-4796-9c2e-57bb15f4ad8c",
+        "31a59e4a-e004-44e7-82d9-8f6c7b21a277"
       ],
       "settings": {
         "video_banner_url": ""
