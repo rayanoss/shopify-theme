@@ -40,10 +40,21 @@
         "r_collection_best": "best-sellers",
         "desc_best_seller": "For neutralising yellow undertones and brightening dull white teeth.,For peroxide-free whitening that fits in your pocket.,Convenient whitening + colour correcting technology for a whiter & brighter smile.,For turning any daily toothpaste into a whitening toothpaste."
       }
+    },
+    "4a7f0289-03a4-4b26-b947-68e4efa6c7fa": {
+      "type": "r-best-product",
+      "settings": {
+        "r_star_product_image": "shopify:\/\/shop_images\/alianey-hismile-dentifrice-violet-dents-blanches_1000x-removebg-preview.png",
+        "r_star_product": "v34-colour-corrector-serum",
+        "r_star_product_benef": "Bundle & save 20%",
+        "r_star_product_desc": "PAP+ Teeth Whitening Strips plus our V34 Colour Corrector Serum for an instantly whiter & brighter smile.",
+        "r_star_product_button_text": "Shop + save 20%"
+      }
     }
   },
   "order": [
     "2f6179b4-2f53-4dbe-a1da-04e776aab489",
-    "3e78cc32-275f-4aa3-9fad-c76aaca2e6f9"
+    "3e78cc32-275f-4aa3-9fad-c76aaca2e6f9",
+    "4a7f0289-03a4-4b26-b947-68e4efa6c7fa"
   ]
 }
