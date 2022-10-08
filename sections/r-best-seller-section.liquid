@@ -16,10 +16,10 @@
                 <div class="bg-white px-[16px] rounded-b-lg h-[45%] flex flex-col justify-around">
                     <a class="text-black text-2xl" href="{{ product.url }}">{{ product.title }}</a>
                     <p class="mt-[10px]">
-                        {% assign descbestsellers = section.settings.desc_best_seller | split: ',' %}
-                            {% for descbestseller in descbestsellers %}
-                                {{ descbestseller }}
-                            {% endfor %}
+                        {% assign descbestsellers = section.settings.desc_best_seller | split: ',' | reverse %}
+                            {% assign indexloop = forloop.index | minus: 1 %}
+                                {{ descbestsellers[indexloop] }}
+                           
                     </p>
                     <button class="w-full bg-black text-white font-semibold px-[10px] py-5 rounded-[50px] mt-2.5">Add to cart - {{ product.price | money }}</button>
                 </div>
