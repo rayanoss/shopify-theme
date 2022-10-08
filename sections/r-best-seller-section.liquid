@@ -1,23 +1,32 @@
 <div>
-    <div>
-        <h2>{{ section.settings.r_title_best_sellers }}</h2>
-        <a>{{ section.settings.r_text_button_best_sellers }}</a>
+    <div class=" flex w-11/12 justify-between items-center mx-auto pt-[60px]">
+        <h2 class="text-4xl font-medium">{{ section.settings.r_title_best_sellers }}</h2>
+        <a class="text-gray-500 flex items-center"><p class="text-[15px] font-semibold mr-4">{{ section.settings.r_text_button_best_sellers }}</p><i class="fa-solid fa-chevron-right"></i></a>
     </div>
-        <ul>
+    <div class="relative overflow-y-scroll h-[510px] mt-[40px]">
+        <ul class="flex flex-row-reverse absolute p-[20px] h-full">
         {% for product in section.settings.r_collection_best.products %}
-            <li>
+            <li class="w-[262px] h-full mr-6 relative">
                 {% if product.tags != blank %}
                 {% for tag in product.tags %}
-                <p>{{ tag }}</p>
+                <p class="absolute bg-white text-black rounded-[20px] py-0.5 px-3.5 translate-x-[-50%] left-[50%] top-[-3%] shadow-[0px_0px_1px_rgb(0,0,0,0.4)]">{{ tag }}</p>
                 {% endfor %}
                 {% endif %}
-                <a href="{{ product.url }}"><img src="{{ product.featured_image }}" alt="" loading="lazy"/></a>
-                <a href="{{ product.url }}">{{ product.title }}</a>
-                <p>{{ section.settings.desc_best_seller }}</p>
-                <button>Add to cart - {{ product.price | money }}</button>
+                <a href="{{ product.url }}"><img class="rounded-t-lg w-full h-[262px] object-cover" src="{{ product.featured_image | image_url  }}" alt="" loading="lazy"/></a>
+                <div class="bg-white px-[16px] rounded-b-lg h-[45%] flex flex-col justify-around">
+                    <a class="text-black text-2xl" href="{{ product.url }}">{{ product.title }}</a>
+                    <p class="mt-[10px]">
+                        {% assign descbestsellers = section.settings.desc_best_seller | split: ',' %}
+                            {% for descbestseller in descbestsellers %}
+                                {{ descbestseller }}
+                            {% endfor %}
+                    </p>
+                    <button class="w-full bg-black text-white font-semibold px-[10px] py-5 rounded-[50px] mt-2.5">Add to cart - {{ product.price | money }}</button>
+                </div>
             </li>
         {% endfor %}
         </ul>
+    </div>
 </div>
 
 {% schema %}
@@ -40,7 +49,12 @@
             "type": "collection", 
             "id": "r_collection_best", 
             "label": "Collection"
-        }
+        },
+        {
+            "type": "text", 
+            "id": "desc_best_seller", 
+            "label": "Description product in order"
+        } 
     ], 
     "presets": [
         {
