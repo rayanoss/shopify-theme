@@ -50,11 +50,20 @@
         "r_star_product_desc": "PAP+ Teeth Whitening Strips plus our V34 Colour Corrector Serum for an instantly whiter & brighter smile.",
         "r_star_product_button_text": "Shop + save 20%"
       }
+    },
+    "7eac3f88-ea0a-4668-80f5-092e7df3d7b6": {
+      "type": "r-rich-text",
+      "settings": {
+        "r_paragraph_title": "We’re building the future of smile care, backed by science & proven by you.",
+        "r_paragrapth_text": "Every day we’re in the Hismile Research Lab, learning from our community, and working with leading dentists to develop peroxide-free products to make you look good, and feel even better. As always, we’re backed by science, and driven by the belief that smile care can, and should, be both effective and safe.",
+        "r_paragrapth_text_btn": "Read more"
+      }
     }
   },
   "order": [
     "2f6179b4-2f53-4dbe-a1da-04e776aab489",
     "3e78cc32-275f-4aa3-9fad-c76aaca2e6f9",
-    "4a7f0289-03a4-4b26-b947-68e4efa6c7fa"
+    "4a7f0289-03a4-4b26-b947-68e4efa6c7fa",
+    "7eac3f88-ea0a-4668-80f5-092e7df3d7b6"
   ]
 }
