@@ -79,11 +79,21 @@
             "r_goal_title": "Hydrating",
             "r_goal_desc": "HA5 Hyaluronic Mouthwash is an everyday essential, that leaves you feeling fresh and revitalised. It’s the perfect addition to your daily smile care routine."
           }
+        },
+        "736c13fa-bcfb-4a73-b0f3-8aea9c2a58ce": {
+          "type": "r-theme-goal-item",
+          "settings": {
+            "r_goal_product": "the-ultimate-whitening-bundle",
+            "r_goal_bg_image": "shopify:\/\/shop_images\/V34_Accordion_-_M.webp",
+            "r_goal_title": "Brightening",
+            "r_goal_desc": "V34 works to brighten teeth by utilising colour correcting technology. By counter-balancing the different hues in your teeth, V34 conceals stains and improves brightness."
+          }
         }
       },
       "block_order": [
         "09bc1c53-cb05-4505-8897-b4214a331d88",
-        "40639887-cd2a-4380-82b6-3a55c04fcbb5"
+        "40639887-cd2a-4380-82b6-3a55c04fcbb5",
+        "736c13fa-bcfb-4a73-b0f3-8aea9c2a58ce"
       ],
       "settings": {
         "r_slider_title": "What are your smile goals?",
