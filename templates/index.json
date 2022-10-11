@@ -88,12 +88,22 @@
             "r_goal_title": "Brightening",
             "r_goal_desc": "V34 works to brighten teeth by utilising colour correcting technology. By counter-balancing the different hues in your teeth, V34 conceals stains and improves brightness."
           }
+        },
+        "2bf962b0-dad3-4359-af22-d1225ac6f000": {
+          "type": "r-theme-goal-item",
+          "settings": {
+            "r_goal_product": "pap-whitening-powder™",
+            "r_goal_bg_image": "shopify:\/\/shop_images\/NHPro_Accordion_-_M.webp",
+            "r_goal_title": "Sensitivity",
+            "r_goal_desc": "Our NHpro formulation contains a concentrated dose of nano-hydroxyapatite (nHAp), an ingredient clinically proven to improve enamel and treat tooth sensitivity."
+          }
         }
       },
       "block_order": [
         "09bc1c53-cb05-4505-8897-b4214a331d88",
         "40639887-cd2a-4380-82b6-3a55c04fcbb5",
-        "736c13fa-bcfb-4a73-b0f3-8aea9c2a58ce"
+        "736c13fa-bcfb-4a73-b0f3-8aea9c2a58ce",
+        "2bf962b0-dad3-4359-af22-d1225ac6f000"
       ],
       "settings": {
         "r_slider_title": "What are your smile goals?",
