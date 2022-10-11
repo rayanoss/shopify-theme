@@ -70,10 +70,20 @@
             "r_goal_title": "Whitening",
             "r_goal_desc": "Based on our instant whitening formula PAP+, we’ve designed strips as our most convenient way to whiten yet."
           }
+        },
+        "40639887-cd2a-4380-82b6-3a55c04fcbb5": {
+          "type": "r-theme-goal-item",
+          "settings": {
+            "r_goal_product": "v34-colour-corrector-serum",
+            "r_goal_bg_image": "shopify:\/\/shop_images\/Homepage_Accordion_-_M.webp",
+            "r_goal_title": "Hydrating",
+            "r_goal_desc": "HA5 Hyaluronic Mouthwash is an everyday essential, that leaves you feeling fresh and revitalised. It’s the perfect addition to your daily smile care routine."
+          }
         }
       },
       "block_order": [
-        "09bc1c53-cb05-4505-8897-b4214a331d88"
+        "09bc1c53-cb05-4505-8897-b4214a331d88",
+        "40639887-cd2a-4380-82b6-3a55c04fcbb5"
       ],
       "settings": {
         "r_slider_title": "What are your smile goals?",
