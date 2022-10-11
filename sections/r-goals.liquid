@@ -1,0 +1,113 @@
+<div class="w-[95%] mt-[80px] mx-auto">
+    <h2 class="text-4xl font-medium">{{ section.settings.r_slider_title }}</h2>
+    <p class="mt-8">{{ section.settings.r_slider_text }}</p>
+    <ul class="goals_container mt-6 w-full flex flex-col">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                    {% when 'r-theme-goal-item'%}
+                    <li class="goals_item transition-all first:rounded-t-lg  last:rounded-b-lg overflow-hidden bg-cover bg-center-slider relative h-28 after:content-[''] after:inset-0 after:absolute after:bg-black after:h-full after:w-full after:opacity-50" style="background-position: center 75%; background-image: url({{ block.settings.r_goal_bg_image }})">
+                        <div class="absolute z-10 inset-0 px-6">
+                            <h3 class="goals_title h-28 flex justify-between items-center text-white font-semibold text-3xl"><span>{{ block.settings.r_goal_title }}</span><span><i class="fa-solid fa-bullseye"></i></span></h3>
+                            <p class="text-white py-6">{{ block.settings.r_goal_desc }}</p>
+                            <a href="{{ section.settings.r_star_product.url }}"><button class="bg-white text-black rounded-full font-bold py-4 w-full mt-6 my-6 mx-auto">Add to cart - {{ product.price | money }}</button></a>
+                        </div>
+                    </li>
+            {% endcase %}
+        {% endfor %}
+    </ul>
+</div>
+{% javascript %}
+
+const goalsContainer = document.querySelector('.goals_container')
+const goalsItem = document.querySelectorAll('.goals_item')
+const goalsTitle = document.querySelectorAll('.goals_title')
+let goalOpenIndex = null;
+let goalsIsOpen = null;  
+let goalsContainerHeight = `${698 + 70 * goalsItem.length - 1}px`; 
+
+window.addEventListener('DOMContentLoaded', () => {
+    goalsContainer.style.height = goalsContainerHeight; 
+    goalsItem[0].style.flexGrow = '1'; 
+    goalOpenIndex = 0; 
+    goalsIsOpen = true; 
+});
+
+goalsTitle.forEach((title, index) => {
+    title.addEventListener('click', () => {
+        if (goalOpenIndex == index && goalsIsOpen) {
+                goalsItem[index].style.flexGrow = '0';  
+                setTimeout(() => {
+                    goalsContainer.style.height = 'auto';
+                }, 150)
+                goalOpenIndex = null;  
+                return goalsIsOpen = false; 
+        }
+
+        if (goalsIsOpen){
+            goalsItem[goalOpenIndex].style.flexGrow = '0'; 
+            goalsItem[index].style.flexGrow = '1'; 
+            goalOpenIndex = index; 
+        }
+
+        if (!goalsIsOpen) { 
+            goalsContainer.style.height = goalsContainerHeight; 
+            goalsItem[index].style.flexGrow = '1'; 
+            goalOpenIndex = index
+            return goalsIsOpen = true; 
+        }
+    })
+});
+
+{% endjavascript %}
+
+{% schema %}
+    {
+        "name": "R-Theme Goals",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "text", 
+                "id": "r_slider_title", 
+                "label": "Your goals title"
+            }, 
+            {
+                "type": "text",
+                "id": "r_slider_text", 
+                "label": "Your goals text"
+            }
+        ], 
+        "blocks": [
+            {
+                "type": "r-theme-goal-item", 
+                "name": "R-theme goal", 
+                "settings": [
+                    {
+                        "type": "product", 
+                        "id": "r_goal_product", 
+                        "label": "Your prouduct"
+                    },
+                    {
+                        "type": "image_picker", 
+                        "id": "r_goal_bg_image", 
+                        "label": "Your product image"
+                    }, 
+                    {
+                        "type": "text", 
+                        "id": "r_goal_title", 
+                        "label": "Your goal title"
+                    }, 
+                    {
+                        "type": "text", 
+                        "id": "r_goal_desc", 
+                        "label": "Your goal description"
+                    }
+                ]
+            }
+        ], 
+        "presets": [
+            {
+                "name": "R-Theme goals"
+            }
+        ]
+    }
+{% endschema %}

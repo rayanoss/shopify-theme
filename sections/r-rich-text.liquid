@@ -1,0 +1,74 @@
+<div class="paragrapth-container h-auto mt-[70px] bg-gray-200 py-14 flex flex-col transition-all duration-500">
+    <h2 class="text-center text-3xl w-3/5 mx-auto font-semibold text-zinc-700">{{ section.settings.r_paragraph_title }}</h2>
+    <p class="paragraph_text opacity-0 transition-all text-gray-500 text-center w-11/12 mt-6 mx-auto">{{ section.settings.r_paragrapth_text }}</p>
+    <button class="rounded-full z-10 border border-gray-300 font-bold px-7 py-2 mt-8 self-center"><span class="read-button transition-all ">{{ section.settings.r_paragrapth_text_btn }}<i class="fa-solid fa-chevron-down"></span></i></button>
+
+</div>
+
+{% javascript %}
+
+let isOpen = false; 
+const readButton = document.querySelector('.read-button'); 
+const paragraphText = document.querySelector('.paragraph_text')
+let initialHeight = paragraphText.clientHeight; 
+paragraphText.style.height = '0px';
+
+readButton.parentElement.addEventListener('click', () => {  
+    console.log('click')
+    if (isOpen === false){
+        isOpen = true;
+        paragraphText.style.height = `${initialHeight}px`
+        setTimeout(() => {
+            paragraphText.style.opacity = '1';
+        }, 150);
+        readButton.innerHTML = 'Read less <i class="fa-solid fa-chevron-up"></i>'; 
+        paragraphText.style.display = 'block!important'; 
+    }else{
+        isOpen = false; 
+        paragraphText.style.opacity = '0';
+        setTimeout(() => {
+            paragraphText.style.height = '0px';
+            readButton.style.opacity = '0'; 
+            setTimeout(() => {
+                readButton.innerHTML = "Read more <i class=\"fa-solid fa-chevron-down\"></i>"
+                readButton.style.opacity = '1'; 
+            }, 150);
+        }, 150);
+    }
+})
+
+{% endjavascript %}
+
+{% schema %}
+    {
+        "name": "R-Theme Rich text",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "text", 
+                "id": "r_paragraph_title", 
+                "label": "Your rich text title"
+            }, 
+            {
+                "type": "text", 
+                "id": "r_paragrapth_text", 
+                "label": "Your rich text"
+            },
+            {
+                "type": "text", 
+                "id": "r_paragrapth_text_btn", 
+                "label": "Your text button"
+            }
+        ],
+        "presets": [
+            {
+                "name": "R-Theme Rich text", 
+                "settings": {
+                    "r_paragraph_title": "We’re building the future of smile care, backed by science & proven by you.",
+                    "r_paragrapth_text": "Every day we’re in the Hismile Research Lab, learning from our community, and working with leading dentists to develop peroxide-free products to make you look good, and feel even better. As always, we’re backed by science, and driven by the belief that smile care can, and should, be both effective and safe.", 
+                    "r_paragrapth_text_btn": "Read more"
+                }
+            }
+        ]
+    }
+{% endschema %}
