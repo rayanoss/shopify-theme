@@ -9,7 +9,7 @@
                         <div class="absolute z-10 inset-0 px-6">
                             <h3 class="goals_title h-28 flex justify-between items-center text-white font-semibold text-3xl"><span>{{ block.settings.r_goal_title }}</span><span><i class="fa-solid fa-bullseye"></i></span></h3>
                             <p class="text-white py-6">{{ block.settings.r_goal_desc }}</p>
-                            <a href="{{ section.settings.r_star_product.url }}"><button class="bg-white text-black rounded-full font-bold py-4 w-full mt-6 my-6 mx-auto">Add to cart - {{ product.price | money }}</button></a>
+                            <a href="{{ section.settings.r_star_product.url }}"><button class="bg-white text-black rounded-full font-bold py-4 w-full mt-6 my-6 mx-auto">Add to cart - {{ block.settings.r_goal_product.price | money }}</button></a>
                         </div>
                     </li>
             {% endcase %}
