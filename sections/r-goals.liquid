@@ -5,7 +5,7 @@
         {% for block in section.blocks %}
             {% case block.type %}
                     {% when 'r-theme-goal-item'%}
-                    <li class="goals_item transition-all first:rounded-t-lg  last:rounded-b-lg overflow-hidden bg-cover bg-center-slider relative h-28 after:content-[''] after:inset-0 after:absolute after:bg-black after:h-full after:w-full after:opacity-50" style="background-position: center 75%; background-image: url({{ block.settings.r_goal_bg_image }})">
+                    <li class="goals_item transition-all first:rounded-t-lg  last:rounded-b-lg overflow-hidden bg-cover bg-center-slider relative h-28 after:content-[''] after:inset-0 after:absolute after:bg-black after:h-full after:w-full after:opacity-50" style="background-position: center 75%; background-image: url({{ block.settings.r_goal_bg_image | image_url }})">
                         <div class="absolute z-10 inset-0 px-6">
                             <h3 class="goals_title h-28 flex justify-between items-center text-white font-semibold text-3xl"><span>{{ block.settings.r_goal_title }}</span><span><i class="fa-solid fa-bullseye"></i></span></h3>
                             <p class="text-white py-6">{{ block.settings.r_goal_desc }}</p>
