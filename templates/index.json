@@ -58,12 +58,34 @@
         "r_paragrapth_text": "Every day we’re in the Hismile Research Lab, learning from our community, and working with leading dentists to develop peroxide-free products to make you look good, and feel even better. As always, we’re backed by science, and driven by the belief that smile care can, and should, be both effective and safe.",
         "r_paragrapth_text_btn": "Read more"
       }
+    },
+    "06fb383c-885a-4f7b-8a24-0cce93bfca00": {
+      "type": "r-goals",
+      "blocks": {
+        "09bc1c53-cb05-4505-8897-b4214a331d88": {
+          "type": "r-theme-goal-item",
+          "settings": {
+            "r_goal_product": "pap-whitening-strips™",
+            "r_goal_bg_image": "shopify:\/\/shop_images\/Strips_Accordion_-_M.webp",
+            "r_goal_title": "Whitening",
+            "r_goal_desc": "Based on our instant whitening formula PAP+, we’ve designed strips as our most convenient way to whiten yet."
+          }
+        }
+      },
+      "block_order": [
+        "09bc1c53-cb05-4505-8897-b4214a331d88"
+      ],
+      "settings": {
+        "r_slider_title": "What are your smile goals?",
+        "r_slider_text": "We’ve got a solution for every smile, with expert formulation and incredible ingredients."
+      }
     }
   },
   "order": [
     "2f6179b4-2f53-4dbe-a1da-04e776aab489",
     "3e78cc32-275f-4aa3-9fad-c76aaca2e6f9",
     "4a7f0289-03a4-4b26-b947-68e4efa6c7fa",
-    "7eac3f88-ea0a-4668-80f5-092e7df3d7b6"
+    "7eac3f88-ea0a-4668-80f5-092e7df3d7b6",
+    "06fb383c-885a-4f7b-8a24-0cce93bfca00"
   ]
 }
