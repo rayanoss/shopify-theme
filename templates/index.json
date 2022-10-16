@@ -109,6 +109,23 @@
         "r_slider_title": "What are your smile goals?",
         "r_slider_text": "We’ve got a solution for every smile, with expert formulation and incredible ingredients."
       }
+    },
+    "16659287600a14eb56": {
+      "type": "apps",
+      "blocks": {
+        "002292c1-11e0-479a-b2d6-2226652271f1": {
+          "type": "shopify:\/\/apps\/beneficial-shipping-app\/blocks\/app-block\/a8bc4286-c3dd-4eb9-b707-63c71611ebdc",
+          "settings": {
+            "color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "002292c1-11e0-479a-b2d6-2226652271f1"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -116,6 +133,7 @@
     "3e78cc32-275f-4aa3-9fad-c76aaca2e6f9",
     "4a7f0289-03a4-4b26-b947-68e4efa6c7fa",
     "7eac3f88-ea0a-4668-80f5-092e7df3d7b6",
-    "06fb383c-885a-4f7b-8a24-0cce93bfca00"
+    "06fb383c-885a-4f7b-8a24-0cce93bfca00",
+    "16659287600a14eb56"
   ]
 }
